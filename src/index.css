@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+ 
+   --breakpoint-xs: 440px;
+   --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --color-pitch: #111111;
+  --color-turf: #f0f0ee;
+}
+
+
+/* :root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+} */
+ *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+ 
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+ 
+body {
+  background: #f0f0ee;
+  color: #111;
+}
+ 
+#root {
+  min-height: 100vh;
+}
+ 
+.app {
+  background: #f0f0ee;
+  min-height: 100vh;
+  border-radius: 16px;
+  overflow: hidden;
+}
+ 
+button {
+  font-family: 'DM Sans', sans-serif;
+}
+ 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+footer{
+  padding:18px 20px 20px;
+}
+/*  */
+
+.spacer {
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+
+.main {
+  position: relative;
+  height: 200vh;
+}
+
+.container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--box-border);
+  border-radius: 12px;
+}
+
+.initial {
+  left: 60%;
+  top: 10%;
+}
+
+.container.second {
+  left: 10%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.second .marker {
+  width: 100px;
+  height: 100px;
+}
+
+.third {
+  right: 10%;
+  bottom: 3rem;
+}
+
+.marker {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  outline: 1px dashed var(--grid-line);
+  outline-offset: -6px;
+  opacity: 0.6;
+}
+
+/* the moving canvas is the “box” */
+canvas.box {
+  width: 200px;
+  height: 200px;
+  border: dashed 1px #d2ceff;
+  display: block;
+  border-radius: 10px;
+  background: transparent;
+  z-index: 2;
+}

@@ -1,0 +1,140 @@
+.hero {
+  text-align: center;
+  padding: 32px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 12px;
+  color: #444;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 24px;
+  letter-spacing: 0.2px;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  display: inline-block;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 80px);
+  font-weight: 400;
+  color: #111;
+  line-height: 1.0;
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+}
+
+.sub {
+  font-size: 15px;
+  color: #666;
+  max-width: 420px;
+  line-height: 1.65;
+  margin: 0 0 28px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.2px;
+}
+
+.btnPrimary:hover {
+  background: #333;
+  transform: scale(1.02);
+}
+
+.btnGhost {
+  background: transparent;
+  border: 1px solid #bbb;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btnGhost:hover {
+  border-color: #555;
+  color: #111;
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  max-width: 480px;
+  justify-content: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.statNum {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: #111;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #888;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.statDivider {
+  width: 1px;
+  height: 32px;
+  background: #ddd;
+}
