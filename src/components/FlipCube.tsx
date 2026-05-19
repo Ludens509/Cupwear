@@ -214,7 +214,7 @@ function makeClassicBallTexture(): THREE.CanvasTexture {
  
   const vignette = g.createRadialGradient(cx, cy, R*0.52, cx, cy, R);
   vignette.addColorStop(0, "rgba(0,0,0,0)");
-  vignette.addColorStop(1, "rgba(0,0,0,0.46)");
+  vignette.addColorStop(1, "rgba(0,0,0,0.42)");
   g.fillStyle = vignette;
   g.beginPath();
   g.arc(cx, cy, R, 0, Math.PI*2);
@@ -419,20 +419,20 @@ export default function FlipCube() {
     // });
     const mat = new THREE.MeshPhongMaterial({
       map: makeClassicBallTexture(), //makeSoccerBallTexture()
-      shininess: 100,
+      shininess: 150,
       wireframe: false,
     });
 
     // Add after creating the scene
     const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(5, 5, 5);
+    light.position.set(3, 4, 5);
     scene.add(light);
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
     scene.add(ambientLight);
 
 // Create a more complex geometry to better show rotation
-    const mesh = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 4), mat); //BoxGeometry(1, 1, 1)
+    const mesh = new THREE.Mesh(new THREE.IcosahedronGeometry(1, 5), mat); //BoxGeometry(1, 1, 1)
     scene.add(mesh);
 
     three.current = { ...three.current, renderer, scene, camera, mesh };
