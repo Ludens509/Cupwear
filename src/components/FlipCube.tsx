@@ -243,16 +243,16 @@ export default function FlipCube() {
           />
         </div>
 
-        <div className="absolute grid grid-rows-2  rounded h-[30%] w-full top-[20%] z-10 mt-[30px] p-10  bg-transparent">
-          <div className="flex flex-row border-b border-gray-300  w-full  items-center justify-center">
+        <div className="absolute grid grid-rows-2  rounded h-[30%] w-full top-[20%] z-10 mt-[30px] p-10  bg-transparent xs:relative">
+          <div className="flex md:flex-row border-b border-gray-300  w-full  items-center justify-center xs:flex-col xs:gap-4">
             <img
               src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80"
               alt=""
               aria-hidden="true"
-              className="w-fit h-24 rounded-l-xl object-cover mr-4  block"
+              className="md:w-fit md:h-24 rounded-l-xl object-cover mr-4  block xs:m-0 xs:w-full xs:h-50 xs:rounded-2xl"
             />
-            <div className="w-1/2 h-24 text-2xl text rounded-md mr-4 text-medium p-1">
-              <p className="line-4 dark:text-slate-600 font-medium">
+            <div className="md:w-1/2 h-24 text-2xl  rounded-md md:mr-4 text-medium p-1 xs:m-0 xs:w-full xs:h-auto xs:text-center">
+              <p className="line-4 dark:text-slate-600 font-medium md:text-left tracking-tight">
                 <span className="font-semibold text-neutral-900">
                   We're the go-to destination for World Cup 2026 kits.
                 </span>{" "}
@@ -261,14 +261,14 @@ export default function FlipCube() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3  w-full h-auto items-center justify-center text-lg p-1 mt-16">
-            <div className="flex flex-col justify-between p-2 gap-10">
+          <div className="grid grid-cols-3  w-full h-auto items-center text-lg p-1 mt-16 gap-4">
+            <div className="flex flex-col justify-between p-1 gap-10 px-3">
               <span className="inline-block w-fit border font-bold border-[#bbbbb6] rounded-full py-[6px] px-4 text-base font-['DM_Sans'] text-[#4 tracking-[0.3px]">
                 About Cupwear
               </span>
 
               {/* body: DM Sans, text-[14px], leading-[1.65], text-[#555] */}
-              <p className="font-['DM_Sans'] text-lg leading-6 text-[#555] mt-2 px-6 tracking-tight ">
+              <p className="font-['DM_Sans'] text-lg leading-6 text-[#555] mt-2  tracking-tight ">
                 We're the go-to destination for World Cup 2026 kits. Every
                 nation, every colour, every crest — curated for fans who wear
                 their passion, not just watch it.
@@ -285,11 +285,11 @@ export default function FlipCube() {
                 loop
                 muted
                 aria-hidden="true"
-                className=" w-full h-100 rounded-4xl object-cover"
+                className=" w-full h-100 rounded-4xl object-cover p-1"
               />
             </div>
-            <div className="flex flex-col justify-center items-center gap-4">
-              <p className="line-clamp-3">
+            <div className="flex flex-col gap-4 mx-8">
+              <p className="line-clamp-4 text-left text-lg font-['DM_Sans'] text-[#555] tracking-tight ">
                 ur mission is to connect every fan with their nation's kit —
                 before the first whistle, after the final goal.
               </p>
