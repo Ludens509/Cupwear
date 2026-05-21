@@ -243,13 +243,13 @@ export default function FlipCube() {
           />
         </div>
 
-        <div className="absolute grid grid-rows-2  rounded h-[30%] w-full top-[20%] z-10 mt-[100px] p-10  bg-transparent">
+        <div className="absolute grid grid-rows-2  rounded h-[30%] w-full top-[20%] z-10 mt-[30px] p-10  bg-transparent">
           <div className="flex flex-row border-b border-gray-300  w-full  items-center justify-center">
             <img
               src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80"
               alt=""
               aria-hidden="true"
-              className="w-fit h-24 rounded-md object-cover mr-4  block"
+              className="w-fit h-24 rounded-l-xl object-cover mr-4  block"
             />
             <div className="w-1/2 h-24 text-2xl text rounded-md mr-4 text-medium p-1">
               <p className="line-4 dark:text-slate-600 font-medium">
@@ -261,7 +261,7 @@ export default function FlipCube() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-3  w-full items-center justify-center text-lg p-1">
+          <div className="grid grid-cols-3  w-full h-auto items-center justify-center text-lg p-1 mt-16">
             <div className="flex flex-col justify-between p-2 gap-10">
               <span className="inline-block w-fit border font-bold border-[#bbbbb6] rounded-full py-[6px] px-4 text-base font-['DM_Sans'] text-[#4 tracking-[0.3px]">
                 About Cupwear
@@ -280,21 +280,24 @@ export default function FlipCube() {
             </div>
             <div className="flex justify-end items-end">
               <video
-            src="/players/video.mp4"
-            autoPlay
-            loop
-            muted
-            aria-hidden="true"
-            className=" w-full h-100 rounded-md object-cover"
-          />
+                src="/players/video.mp4"
+                autoPlay
+                loop
+                muted
+                aria-hidden="true"
+                className=" w-full h-100 rounded-4xl object-cover"
+              />
             </div>
             <div className="flex flex-col justify-center items-center gap-4">
-              <p className="line-clamp-3">ur mission is to connect every fan with their nation's kit — before
-            the first whistle, after the final goal.</p>
-              <img src="/players/NEYMAR-JR.webp" 
-              alt="Neymar" 
-              aria-hidden="true" 
-              className="w-[200px] h-[250px] rounded-md object-cover block mt-4" 
+              <p className="line-clamp-3">
+                ur mission is to connect every fan with their nation's kit —
+                before the first whistle, after the final goal.
+              </p>
+              <img
+                src="/players/NEYMAR-JR.webp"
+                alt="Neymar"
+                aria-hidden="true"
+                className="w-[200px] h-[250px] rounded-3xl object-cover block mt-4"
               />
             </div>
           </div>
@@ -309,7 +312,7 @@ export default function FlipCube() {
         */}
         <div ref={secondRef} className="container second">
           <div className="marker" />
-          
+
           {/* <img
             src="/players/goalkeeper.png"
             alt=""
@@ -520,10 +523,17 @@ export default function FlipCube() {
             transparent 100%
           );
           mask-image: linear-gradient(
-            to top,
+            to bottom,
+            black 0%,
+            black 22%,
+            rgba(0,0,0,0.4) 60%,
+            transparent 100%
+          );
+          mask-image: linear-gradient(
+            to right,
             black 0%,
             black 42%,
-            rgba(0,0,0,0.4) 50%,
+            rgba(0,0,0,0.4) 70%,
             transparent 100%
           );
         }
