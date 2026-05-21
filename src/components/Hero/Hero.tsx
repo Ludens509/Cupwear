@@ -32,7 +32,7 @@ function Hero() {
  
       <JerseyFan jerseys={jerseys} />
  
-      <div className={styles.statsRow}>
+      {/* <div className={styles.statsRow}>
         <div className={styles.stat}>
           <span className={styles.statNum}>48</span>
           <span className={styles.statLabel}>nations</span>
@@ -47,7 +47,7 @@ function Hero() {
           <span className={styles.statNum}>2026</span>
           <span className={styles.statLabel}>World Cup</span>
         </div>
-      </div>
+      </div> */}
     </section>
     {/* BallonFlip component */}
     <BallonFlip />

@@ -21,7 +21,7 @@ const Footer = () => {
     <footer className="footer flex items-center justify-center  pt-16 px-6 pb-4 md:pt-16 md:px-10 md:pb-4">
 
       {/* inner: max-width:1100px, margin:0 auto */}
-      <div className="m-1 w-full p-[28px_30px] bg-[#e7e6e6e7] drop-shadow-xs rounded-b-lg  mx-auto">
+      <div className="m-1 w-full p-[28px_30px]  bg-[#f4f4f2] drop-shadow-xs rounded-b-lg  mx-auto"> {/* bg-[#e7e6e6e7]*/}
 
         {/* top: grid 1fr 2fr, gap:64px, mb:48px, pb:48px, border-bottom:#222
             mobile: single column, gap:40px */}
