@@ -30,3 +30,11 @@ export interface NavLink {
   label: string;
   href: string;
 }
+
+export interface Testimonials {
+  id: number;
+  segments:{text:string; muted:boolean}[];
+  name:string;
+  role:string;
+  avatar:string;
+}

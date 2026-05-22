@@ -224,7 +224,7 @@ export default function FlipCube() {
 
   return (
     <>
-      <div className="spacer">scroll down</div>
+      <div className="spacer">{""}</div>
 
       <div ref={stageRef} className="main">
         {/*
@@ -312,13 +312,6 @@ export default function FlipCube() {
         */}
         <div ref={secondRef} className="container second">
           <div className="marker" />
-
-          {/* <img
-            src="/players/goalkeeper.png"
-            alt=""
-            aria-hidden="true"
-            className="player player-goalkeeper"
-          /> */}
         </div>
 
         {/*
@@ -339,7 +332,7 @@ export default function FlipCube() {
         </div>
       </div>
 
-      <div className="spacer final">end</div>
+      {/* <div className="spacer final">end</div> */}
 
       <style>{`
         .spacer {
