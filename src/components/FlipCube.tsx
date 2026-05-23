@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import StatsReview from "./featured/StatsReview";
+import TrendKits from "./featured/TrendKits";
 
 gsap.registerPlugin(Flip, ScrollTrigger);
 
@@ -235,15 +237,17 @@ export default function FlipCube() {
           Place file at: public/players/kicker.png
         */}
         <div ref={initialRef} className="container initial">
+          <StatsReview />
           <img
             src="/players/kicker.png"
             alt=""
             aria-hidden="true"
             className="player player-kicker"
           />
+          <TrendKits />
         </div>
 
-        <div className="absolute grid grid-rows-2  rounded h-[30%] w-full top-[20%] z-10 mt-[30px] p-10  bg-transparent xs:relative">
+        <div className="absolute grid grid-rows-2  rounded h-[30%] w-full top-[30%] z-10 mt-[30px] p-10  bg-transparent xs:relative">
           <div className="flex md:flex-row border-b border-gray-300  w-full  items-center justify-center xs:flex-col xs:gap-4">
             <img
               src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80"
@@ -263,7 +267,7 @@ export default function FlipCube() {
           </div>
           <div className="grid grid-cols-3  w-full h-auto items-center text-lg p-1 mt-16 gap-4">
             <div className="flex flex-col justify-between p-1 gap-10 px-3">
-              <span className="inline-block w-fit border font-bold border-[#bbbbb6] rounded-full py-[6px] px-4 text-base font-['DM_Sans'] text-[#4 tracking-[0.3px]">
+              <span className="inline-block w-fit border font-bold border-[#bbbbb6] rounded-full py-[6px] px-4 text-base font-['DM_Sans']  tracking-[0.3px]">
                 About Cupwear
               </span>
 
@@ -352,7 +356,7 @@ export default function FlipCube() {
 
         .container {
           position: absolute;
-          width: -webkit-fill-available;
+          width: 81%;
           // width: 200px;
           height: 200px;
           display: grid;
@@ -445,8 +449,8 @@ export default function FlipCube() {
           height: clamp(480px, 72vh, 1400px);
           
           width: 1500px;
-          bottom: 14%;
-          left: 68.5%;
+          bottom: 15%;
+          left: 61.5%;
           transform: translateX(-50%);
           -webkit-mask-image: linear-gradient(
             to bottom,
@@ -506,7 +510,7 @@ export default function FlipCube() {
           height: clamp(380px, 72vh, 1200px);
           width:500px; 
           top: 1%;
-          left: 70%;
+          left: 75%;
           transform: translateX(-50%);
           -webkit-mask-image: linear-gradient(
             to top,
