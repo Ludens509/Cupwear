@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
+import Container from "../layout/Container";
 
 
 export default function Navbar() {
@@ -8,37 +9,41 @@ export default function Navbar() {
 
   return (
     <>
-       <nav className={styles.nav}>
-      <div className={styles.logo}>
-        <span className={styles.logoDot} />
-        Cupwear
-      </div>
- 
-      <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
-        {['Shop', 'Nations', 'Pricing', 'About'].map((link) => (
-          <li key={link}>
-            <a href={`#${link.toLowerCase()}`} className={styles.link}>
-              {link}
-            </a>
-          </li>
-        ))}
-      </ul>
- 
-      <div className={styles.actions}>
-        <button className={styles.btnGhost}>Sign in</button>
-        <button className={styles.btnPrimary}>Get yours</button>
-      </div>
- 
-      <button
-        className={styles.hamburger}
-        onClick={() => setMenuOpen((v) => !v)}
-        aria-label="Toggle menu"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-    </nav>
+      <header className="relative z-10 py-4 md:py-5">
+        <Container>
+          <nav className={styles.nav}>
+            <div className={styles.logo}>
+              <span className={styles.logoDot} />
+              Cupwear
+            </div>
+
+            <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
+              {['Shop', 'Nations', 'Pricing', 'About'].map((link) => (
+                <li key={link}>
+                  <a href={`#${link.toLowerCase()}`} className={styles.link}>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className={styles.actions}>
+              <button className={styles.btnGhost}>Sign in</button>
+              <button className={styles.btnPrimary}>Get yours</button>
+            </div>
+
+            <button
+              className={styles.hamburger}
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Toggle menu"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </nav>
+        </Container>
+      </header>
   
 
 

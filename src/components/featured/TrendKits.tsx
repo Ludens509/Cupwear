@@ -2,7 +2,7 @@ const TrendKits = () => {
   return (
     <>
       {/* RIGHT FLOAT */}
-      <div className="absolute right-[2%] top-1/2 -translate-y-1/2 flex flex-col gap-3 w-[18%] z-20">
+      <div className="hidden lg:flex absolute right-[2%] top-1/2 -translate-y-1/2 flex-col gap-3 w-[18%] z-20">
         {/* Featured kit card */}
         <div className="bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden border border-black/8">
           <div className="h-20 bg-gradient-to-br from-[#74ACDF] to-white flex items-center justify-center text-3xl">

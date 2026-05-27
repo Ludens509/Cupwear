@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { testimonials } from '../../data/testimonials';
+import Container from '../layout/Container';
 
 export default function TestimonialSection() {
   const [current, setCurrent] = useState(0);
@@ -10,9 +11,8 @@ export default function TestimonialSection() {
   const t = testimonials[current];
 
   return (
-    /* section: white bg, generous padding */
-    <section className="bg-white px-8 py-16 md:px-16 md:py-20 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto relative">
+    <section className="bg-[#e7e6e6e7] py-16 md:py-20 lg:py-24 overflow-hidden">
+      <Container className="relative">
 
         {/* ── Decorative giant quote mark — top left ── */}
         {/* position:absolute, huge, light grey, font Bebas Neue */}
@@ -27,7 +27,7 @@ export default function TestimonialSection() {
         {/* Sits below the decorative quote mark with left indent to align
             with where the real quote starts (matches screenshot) */}
         <div className="relative pt-28 md:pt-32 pb-12">
-          <p className="font-['Bebas_Neue'] text-[clamp(44px,10.5vw,10px)] leading-[0.97] tracking-[0.01em] m-0">
+          <p className="font-['Bebas_Neue'] text-[clamp(44px,10.5vw,120px)] leading-[0.97] tracking-[0.01em] m-0">
             {t.segments.map((seg, i) => (
               <span
                 key={i}
@@ -115,7 +115,7 @@ export default function TestimonialSection() {
           ))}
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }

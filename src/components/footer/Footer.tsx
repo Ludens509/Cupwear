@@ -1,3 +1,5 @@
+import Container from "../layout/Container";
+
 const Footer = () => {
   const navLinks = [
     {
@@ -15,13 +17,9 @@ const Footer = () => {
   ];
 
   return (
-    <>
-    {/* footer: background:#111, padding: 64px 40px 32px → pt-16 px-10 pb-8
-       mobile: padding: 48px 24px 28px → md:pt-16 md:px-10 md:pb-8 */}
-    <footer className="footer flex items-center justify-center  pt-16 px-6 pb-4 md:pt-16 md:px-10 md:pb-4">
-
-      {/* inner: max-width:1100px, margin:0 auto */}
-      <div className="m-1 w-full p-[28px_30px]  bg-[#f4f4f2] drop-shadow-xs rounded-b-lg  mx-auto"> {/* bg-[#e7e6e6e7]*/}
+    <footer className="pt-16 pb-6 md:pt-20 md:pb-8">
+      <Container>
+        <div className="w-full p-7 sm:p-8 bg-[#f4f4f2] drop-shadow-xs rounded-b-lg">
 
         {/* top: grid 1fr 2fr, gap:64px, mb:48px, pb:48px, border-bottom:#222
             mobile: single column, gap:40px */}
@@ -94,9 +92,9 @@ const Footer = () => {
           </div>
         </div>
 
-      </div>
+        </div>
+      </Container>
     </footer>
-    </>
   );
 };
 

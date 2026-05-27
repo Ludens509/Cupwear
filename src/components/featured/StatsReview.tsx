@@ -2,7 +2,7 @@ const StatsReview = () => {
   return (
     <>
       {/* LEFT FLOAT — position:absolute so it doesn't disturb the ball layout */}
-      <div className="absolute left-[2%] top-1/2 -translate-y-1/2 flex flex-col gap-3 w-[18%] z-20">
+      <div className="hidden lg:flex absolute left-[2%] top-1/2 -translate-y-1/2 flex-col gap-3 w-[18%] z-20">
         {/* Stat cards */}
         {[
           { label: "Nations available", value: "48" },
