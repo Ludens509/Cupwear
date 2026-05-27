@@ -2,9 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 40px;
   position: relative;
-  z-index: 10;
 }
 
 .logo {
@@ -103,18 +101,19 @@
   border-radius: 2px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .links {
     display: none;
     position: absolute;
-    top: 64px;
+    top: calc(100% + 12px);
     left: 0;
     right: 0;
     background: #f0f0ee;
     flex-direction: column;
-    padding: 16px 40px;
+    padding: 16px 24px;
     gap: 16px;
     border-top: 1px solid #ddd;
+    z-index: 20;
   }
 
   .links.open {

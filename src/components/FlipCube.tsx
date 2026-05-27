@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import StatsReview from "./featured/StatsReview";
+import TrendKits from "./featured/TrendKits";
 
 gsap.registerPlugin(Flip, ScrollTrigger);
 
@@ -235,70 +237,76 @@ export default function FlipCube() {
           Place file at: public/players/kicker.png
         */}
         <div ref={initialRef} className="container initial">
+          <StatsReview />
           <img
-            src="/players/kicker.png"
+            src="/players/kicker-ball.png"
             alt=""
             aria-hidden="true"
             className="player player-kicker"
           />
+          <TrendKits />
         </div>
 
-        <div className="absolute grid grid-rows-2  rounded h-[30%] w-full top-[20%] z-10 mt-[30px] p-10  bg-transparent xs:relative">
-          <div className="flex md:flex-row border-b border-gray-300  w-full  items-center justify-center xs:flex-col xs:gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80"
-              alt=""
-              aria-hidden="true"
-              className="md:w-fit md:h-24 rounded-l-xl object-cover mr-4  block xs:m-0 xs:w-full xs:h-50 xs:rounded-2xl"
-            />
-            <div className="md:w-1/2 h-24 text-2xl  rounded-md md:mr-4 text-medium p-1 xs:m-0 xs:w-full xs:h-auto xs:text-center">
-              <p className="line-4 dark:text-slate-600 font-medium md:text-left tracking-tight">
-                <span className="font-semibold text-neutral-900">
-                  We're the go-to destination for World Cup 2026 kits.
-                </span>{" "}
-                Every nation, every colour, every crest — curated for fans who
-                wear their passion, not just watch it.
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-3  w-full h-auto items-center text-lg p-1 mt-16 gap-4">
-            <div className="flex flex-col justify-between p-1 gap-10 px-3">
-              <span className="inline-block w-fit border font-bold border-[#bbbbb6] rounded-full py-[6px] px-4 text-base font-['DM_Sans'] text-[#4 tracking-[0.3px]">
-                About Cupwear
-              </span>
-
-              {/* body: DM Sans, text-[14px], leading-[1.65], text-[#555] */}
-              <p className="font-['DM_Sans'] text-lg leading-6 text-[#555] mt-2  tracking-tight ">
-                We're the go-to destination for World Cup 2026 kits. Every
-                nation, every colour, every crest — curated for fans who wear
-                their passion, not just watch it.
-              </p>
-
-              <button className="bg-[#1B8A3E] text-white rounded-[999px] py-3 px-6  text-base font-medium hover:bg-[#16692f] transition-colors hover:scale-1.02 tracking-[0.02em] cursor-pointer w-fit">
-                Get in touch
-              </button>
-            </div>
-            <div className="flex justify-end items-end">
-              <video
-                src="/players/video.mp4"
-                autoPlay
-                loop
-                muted
-                aria-hidden="true"
-                className=" w-full h-100 rounded-4xl object-cover p-1"
-              />
-            </div>
-            <div className="flex flex-col gap-4 mx-8">
-              <p className="line-clamp-4 text-left text-lg font-['DM_Sans'] text-[#555] tracking-tight ">
-                ur mission is to connect every fan with their nation's kit —
-                before the first whistle, after the final goal.
-              </p>
+        <div className="absolute w-full top-[28%] z-10 px-4 sm:px-6 lg:px-10 bg-transparent md:mt-25 xs:mt-5">
+          <div className="mx-auto w-full max-w-7xl flex flex-col gap-8 lg:gap-12">
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 border-b border-gray-300 pb-6">
               <img
-                src="/players/NEYMAR-JR.webp"
-                alt="Neymar"
+                src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80"
+                alt=""
                 aria-hidden="true"
-                className="w-[200px] h-[250px] rounded-3xl object-cover block mt-4"
+                className="w-full md:w-48 lg:w-56 h-40 md:h-24 object-cover rounded-2xl md:rounded-l-xl md:rounded-r-none block"
               />
+              <div className="flex-1 text-base sm:text-lg md:text-2xl">
+                <p className="font-medium tracking-tight text-center md:text-left">
+                  <span className="font-semibold text-neutral-900">
+                    We're the go-to destination for World Cup 2026 kits.
+                  </span>{" "}
+                  Every nation, every colour, every crest — curated for fans
+                  who wear their passion, not just watch it.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+              <div className="flex flex-col gap-6 lg:gap-10 px-1 sm:px-3">
+                <span className="inline-block w-fit border font-bold border-[#bbbbb6] rounded-full py-[6px] px-4 text-sm sm:text-base font-['DM_Sans'] tracking-[0.3px]">
+                  About Cupwear
+                </span>
+
+                <p className="font-['DM_Sans'] text-base sm:text-lg leading-relaxed text-[#555] tracking-tight">
+                  We're the go-to destination for World Cup 2026 kits. Every
+                  nation, every colour, every crest — curated for fans who wear
+                  their passion, not just watch it.
+                </p>
+
+                <button className="bg-[#1B8A3E] text-white rounded-[999px] py-3 px-6 text-sm sm:text-base font-medium hover:bg-[#16692f] hover:scale-[1.02] transition-all tracking-[0.02em] cursor-pointer w-fit">
+                  Get in touch
+                </button>
+              </div>
+
+              <div className="flex justify-center md:justify-end items-stretch">
+                <video
+                  src="/players/video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  aria-hidden="true"
+                  className="w-full h-64 sm:h-80 md:h-full max-h-[420px] rounded-3xl lg:rounded-[2rem] object-cover"
+                />
+              </div>
+
+              <div className="flex flex-col gap-4 px-1 sm:px-4">
+                <p className="line-clamp-4 text-left text-base sm:text-lg font-['DM_Sans'] text-[#555] tracking-tight">
+                  Our mission is to connect every fan with their nation's kit —
+                  before the first whistle, after the final goal.
+                </p>
+                <img
+                  src="/players/NEYMAR-JR.webp"
+                  alt="Neymar"
+                  aria-hidden="true"
+                  className="w-full max-w-[200px] aspect-[4/5] rounded-3xl object-cover block mt-2"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -347,14 +355,20 @@ export default function FlipCube() {
 
         .main {
           position: relative;
-          height: 200vh;
+          height: 280vh;
+        }
+        @media (min-width: 768px) {
+          .main { height: 220vh; }
+        }
+        @media (min-width: 1024px) {
+          .main { height: 200vh; }
         }
 
         .container {
           position: absolute;
-          width: -webkit-fill-available;
+          width: 81%;
           // width: 200px;
-          height: 200px;
+          height: 150px;
           display: grid;
           place-items: center;
           overflow: visible;
@@ -442,11 +456,11 @@ export default function FlipCube() {
           Mask fades toward the top so the player dissolves naturally.
         */
         .player-kicker {
-          height: clamp(480px, 72vh, 1400px);
-          
-          width: 1500px;
-          bottom: 14%;
-          left: 68.5%;
+          height: clamp(360px, 60vh, 1100px);
+          width: clamp(420px, 110vw, 1400px);
+          max-width: 140vw;
+          bottom: 12%;
+          left: 50%;
           transform: translateX(-50%);
           -webkit-mask-image: linear-gradient(
             to bottom,
@@ -472,8 +486,7 @@ export default function FlipCube() {
           Mask fades the trailing right side.
         */
         .player-goalkeeper {
-          // width: clamp(300px, 52vw, 700px);
-          width: 2500px;
+          width: clamp(600px, 160vw, 2400px);
           height: auto;
           left: 50%;
           top: 40%;
@@ -506,7 +519,7 @@ export default function FlipCube() {
           height: clamp(380px, 72vh, 1200px);
           width:500px; 
           top: 1%;
-          left: 70%;
+          left: 75%;
           transform: translateX(-50%);
           -webkit-mask-image: linear-gradient(
             to top,
