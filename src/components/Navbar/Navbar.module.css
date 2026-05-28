@@ -43,6 +43,11 @@
   color: #111;
 }
 
+.link.active {
+  color: #111;
+  font-weight: 600;
+}
+
 .actions {
   display: flex;
   gap: 10px;

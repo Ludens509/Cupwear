@@ -1,16 +1,19 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import App from "../App";
-import NotFoundPage  from "../screens/NotFoundPage";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import App from '../App'
+import About from '../screens/About'
+import NotFoundPage from '../screens/NotFoundPage'
+import { TransitionProvider } from '../contexts'
 
-const AppRouter = () => {
-  return (
-    <BrowserRouter>
+const AppRouter = () => (
+  <BrowserRouter>
+    <TransitionProvider>
       <Routes>
-        <Route path={"/"} element={<App />} />
-        <Route path={"*"} element={<NotFoundPage />} />
+        <Route path="/" element={<App />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </BrowserRouter>
-  );
-};
+    </TransitionProvider>
+  </BrowserRouter>
+)
 
-export default AppRouter;
+export default AppRouter
