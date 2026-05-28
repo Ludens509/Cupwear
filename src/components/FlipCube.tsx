@@ -239,7 +239,7 @@ export default function FlipCube() {
         <div ref={initialRef} className="container initial">
           <StatsReview />
           <img
-            src="/players/kicker-ball.png"
+            src="/players/baller.png"
             alt=""
             aria-hidden="true"
             className="player player-kicker"
@@ -285,12 +285,17 @@ export default function FlipCube() {
               </div>
 
               <div className="flex justify-center md:justify-end items-stretch">
-                <video
+                {/* <video
                   src="/players/video.mp4"
                   autoPlay
                   loop
                   muted
                   aria-hidden="true"
+                  className="w-full h-64 sm:h-80 md:h-full max-h-[420px] rounded-3xl lg:rounded-[2rem] object-cover"
+                /> */}
+                <img
+                  src="/about-jerseys.webp"
+                  alt="National team jerseys on a clothesline"
                   className="w-full h-64 sm:h-80 md:h-full max-h-[420px] rounded-3xl lg:rounded-[2rem] object-cover"
                 />
               </div>
@@ -456,11 +461,11 @@ export default function FlipCube() {
           Mask fades toward the top so the player dissolves naturally.
         */
         .player-kicker {
-          height: clamp(360px, 60vh, 1100px);
+          height: clamp(650px, 60vh, 1200px);
           width: clamp(420px, 110vw, 1400px);
           max-width: 140vw;
-          bottom: 12%;
-          left: 50%;
+          bottom: calc(0.5% - 270px);
+          left: 44%;
           transform: translateX(-50%);
           -webkit-mask-image: linear-gradient(
             to bottom,
