@@ -1,21 +1,12 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import "./index.css"
-import Footer from "./components/footer/Footer";
-
+import PageLayout from './components/layout/PageLayout'
+import Hero from './components/Hero/Hero'
+import './index.css'
 
 function App() {
-
   return (
-    <>
-    <div className="app">
-      <Navbar />
-      <Hero/>
-      <Footer/>
-
-    </div>
-      
-    </>
+    <PageLayout>
+      <Hero />
+    </PageLayout>
   )
 }
 
