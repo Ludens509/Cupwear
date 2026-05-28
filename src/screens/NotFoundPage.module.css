@@ -1,0 +1,125 @@
+.page {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+  background: #f0f0ee;
+  padding: 80px 0 120px;
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.numberRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  line-height: 0.85;
+}
+
+.digit {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(140px, 22vw, 300px);
+  color: #111;
+  letter-spacing: -4px;
+  display: inline-block;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 540px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.redCard {
+  display: inline-block;
+  width: 13px;
+  height: 17px;
+  background: #ef4444;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 400;
+  color: #111;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.homeBtn {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 30px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.2px;
+}
+
+.homeBtn:hover {
+  background: #333;
+  transform: scale(1.02);
+}
+
+.ghostBtn {
+  background: transparent;
+  border: 1px solid #bbb;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.ghostBtn:hover {
+  border-color: #555;
+  color: #111;
+}
+
+@media (max-width: 767px) {
+  .digit {
+    letter-spacing: -2px;
+  }
+}
