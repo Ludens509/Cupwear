@@ -54,6 +54,27 @@
   align-items: center;
 }
 
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #ccc;
+}
+
+.userName {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
 .btnGhost {
   background: transparent;
   border: 1px solid #bbb;
